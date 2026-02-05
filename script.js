@@ -1,7 +1,3 @@
-// CloudVigia - Sistema Inteligente de Monitoramento Urbano
-// Script principal com funcionalidades interativas
-
-// Dados fictícios realistas para o sistema
 const mockData = {
     reports: [
         {
