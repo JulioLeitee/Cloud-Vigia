@@ -1774,3 +1774,104 @@ a {
         gap: 0.5rem;
     }
 }
+.simple-flow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 40px;
+}
+
+.flow-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 100px;
+}
+
+.flow-icon {
+    width: 70px;
+    height: 70px;
+    background-color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    box-shadow: var(--shadow);
+    border: 3px solid var(--primary);
+    transition: transform 0.3s ease;
+}
+
+.flow-item:hover .flow-icon {
+    transform: scale(1.1);
+}
+
+.flow-icon i {
+    font-size: 2rem;
+    color: var(--primary);
+}
+
+/* Cores diferentes para cada ícone */
+.flow-item:nth-child(3) .flow-icon {
+    border-color: var(--secondary);
+}
+
+.flow-item:nth-child(3) .flow-icon i {
+    color: var(--secondary);
+}
+
+.flow-item:nth-child(5) .flow-icon {
+    border-color: var(--accent);
+}
+
+.flow-item:nth-child(5) .flow-icon i {
+    color: var(--accent);
+}
+
+.flow-item:nth-child(7) .flow-icon {
+    border-color: var(--warning);
+}
+
+.flow-item:nth-child(7) .flow-icon i {
+    color: var(--warning);
+}
+
+.flow-item:nth-child(9) .flow-icon {
+    border-color: var(--success-color);
+}
+
+.flow-item:nth-child(9) .flow-icon i {
+    color: var(--success-color);
+}
+
+.flow-label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--dark);
+    text-align: center;
+}
+
+.flow-arrow {
+    color: var(--primary);
+    font-size: 1.5rem;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 0.7; }
+    50% { opacity: 1; }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .simple-flow {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .flow-arrow {
+        transform: rotate(90deg);
+    }
+}
